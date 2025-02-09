@@ -7,20 +7,26 @@
   }
   
   .header-top {
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
   }
   
-  .header-title {
-    font-size: 24px; 
+.header-title {
+    font-family: 'Odor Mean Chey', serif;
+    font-size: 36px;
     font-weight: bold;
-  }
-  
-  .header-subtitle {
-    font-size: 14px;
+    color: #2d572c;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.header-subtitle {
+    font-family: 'Jaldi', sans-serif;
+    font-size: 24px;
     color: #6e9c5e;
-  }
-  
+    display: inline-block;
+}
   .header-content {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
   }

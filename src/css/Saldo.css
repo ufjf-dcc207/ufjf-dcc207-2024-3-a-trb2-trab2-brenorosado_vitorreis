@@ -1,0 +1,37 @@
+.saldo-container {
+    background-color: #f5f5f5; 
+    padding: 20px;
+    border-radius: 10px; 
+    display: grid;
+    grid-template-rows: auto auto; /* Duas linhas: saldo e extrato */
+    gap: 20px; 
+  }
+  
+  .saldo-bloco {
+    background-color: #B6F98B; 
+    padding: 20px;
+    border-radius: 10px; 
+    text-align: center;
+  }
+  
+  .saldo-bloco h2 {
+    margin: 0;
+    font-size: 18px; 
+  }
+  
+  .saldo-bloco p {
+    font-size: 24px; 
+    font-weight: bold;
+  }
+  
+  .extrato-blocos {
+    display: grid;
+    gap: 10px; 
+  }
+  
+  .extrato-item {
+    background-color: #C0F39F; 
+    border-radius: 10px;
+    height: 50px; 
+  }
+  

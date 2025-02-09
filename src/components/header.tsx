@@ -1,28 +1,17 @@
-import '../css/header.css';
+import "../css/Header.css";
+import Saldo from "./Saldo"; 
+import Grafico from "./Grafico"; 
 
 function Header() {
-
-
-    
-    return (
-      <header className="header">
-
+  return (
+    <header className="header">
+      <div className="header-top">
         <h1 className="header-title">SMART FINANCE</h1>
-
         <p className="header-subtitle">Controle financeiro</p>
-
-
-        <div className="header-content">
-
-        <div className="saldo-bloco">
-
-          <h2>Saldo</h2>
-          <p>R$ 218,99</p>
-        </div>
-        <div className="grafico-bloco">
-            
-          <p>Gráfico aqui</p>
-        </div>
+      </div>
+      <div className="header-content">
+        <Saldo /> {/* Componente Saldo */}
+        <Grafico /> {/* Componente Grafico */}
       </div>
     </header>
   );

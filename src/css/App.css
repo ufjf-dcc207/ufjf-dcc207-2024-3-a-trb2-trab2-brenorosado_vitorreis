@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Jaldi:wght@400;700&family=Odor+Mean+Chey&display=swap');
+
+
 .App {
-  background-color: #2d572c; /* Fundo verde escuro */
-  height: 100vh; /* Altura total da tela */
+  background-color: #2d572c;
+  height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center; /* Centraliza o conteúdo */
+  align-items: center;
   margin: 0;
-  font-family: Arial, sans-serif; /* Fonte padrão */
+  font-family: Arial, sans-serif;
 }
