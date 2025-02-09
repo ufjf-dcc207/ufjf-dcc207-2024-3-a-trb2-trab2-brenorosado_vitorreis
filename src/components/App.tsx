@@ -1,12 +1,12 @@
-import '../css/App.css'
+import "../css/App.css";
+import Header from "./header";
 
 function App() {
-
   return (
-    <>
-      <h1>Olá, Mundo!</h1>
-    </>
-  )
+    <div className="App">
+      <Header />
+    </div>
+  );
 }
 
-export default App
+export default App;

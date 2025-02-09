@@ -1,6 +1,9 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.App {
+  background-color: #2d572c; /* Fundo verde escuro */
+  height: 100vh; /* Altura total da tela */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centraliza o conteúdo */
+  margin: 0;
+  font-family: Arial, sans-serif; /* Fonte padrão */
 }

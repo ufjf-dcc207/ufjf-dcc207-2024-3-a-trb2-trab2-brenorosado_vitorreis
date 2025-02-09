@@ -1,0 +1,26 @@
+.header {
+    background-color: #ffffff;
+    color: #2d572c;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+  }
+  
+  .header-top {
+    margin-bottom: 20px; 
+  }
+  
+  .header-title {
+    font-size: 24px; 
+    font-weight: bold;
+  }
+  
+  .header-subtitle {
+    font-size: 14px;
+    color: #6e9c5e;
+  }
+  
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+  }
