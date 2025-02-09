@@ -25,6 +25,7 @@ function App() {
 
   return (
     <div className="App">
+      
       <Sidebar onAddClick={handleAddClick} onRemoveClick={handleRemoveClick} />
       <MenuFlutuante
         isVisible={menuVisible}

@@ -3,7 +3,7 @@ import "../css/Grafico.css";
 function Grafico() {
   return (
     <div className="grafico-bloco">
-      {/* codigo do grafico */}
+      {/* Grafico logica */}
       <p>Gráfico aqui</p>
     </div>
   );
