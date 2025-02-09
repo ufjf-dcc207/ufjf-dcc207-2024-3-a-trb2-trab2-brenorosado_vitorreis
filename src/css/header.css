@@ -2,8 +2,9 @@
     background-color: #ffffff;
     color: #2d572c;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 32px;
     width: 90%;
+    height: 90%;
   }
   
   .header-top {
