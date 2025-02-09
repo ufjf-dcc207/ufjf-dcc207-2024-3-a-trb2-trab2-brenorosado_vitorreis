@@ -13,6 +13,7 @@ function App() {
   const [menuVisible, setMenuVisible] = useState(false);
   const [menuType, setMenuType] = useState<"receita" | "despesa" | null>(null);
   const [recipes, setRecipes] = useState<RecipeType[]>([]);
+  const [saldo, setSaldo] = useState(0);
 
   const handleAddClick = () => {
     setMenuType("receita"); // Define que o menu é para receita.
@@ -29,15 +30,17 @@ function App() {
     setMenuType(null);
   };
 
-  function addRecipe(value: number, type: string){
-    if(value === 0)
-      throw new Error("Não é possivel adicionar receita de valor 0");
+  function addRecipe(value: number, type: string | null){
+    if(value === 0) return;
+    value = type === "receita" ? value : value * -1
     const newRecipe = {
       id: Date.now(), 
-      value: type === "receita" ? value : value * -1
+      value: value
     };
 
+    setSaldo(saldo => saldo + value)
     setRecipes([...recipes, newRecipe])
+    console.log([...recipes, newRecipe])
   }
 
   function removeRecipe(id: number){
@@ -52,6 +55,7 @@ function App() {
         isVisible={menuVisible}
         type={menuType}
         onClose={handleCloseMenu}
+        addRecipe={addRecipe}
       />
         <Header />
     </div>
