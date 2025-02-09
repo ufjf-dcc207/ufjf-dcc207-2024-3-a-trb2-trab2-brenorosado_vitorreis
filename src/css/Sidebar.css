@@ -1,0 +1,44 @@
+.sidebar {
+    background-color: #ffffff; 
+    border-radius: 32px; 
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px; 
+    width: 100px;
+    height: 90%;  
+    margin-right: 20px; 
+  }
+  
+  .sidebar-avatar {
+    background-color: #c4c4c4; /* Fundo cinza para o avatar */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 170px;
+  }
+  
+  .sidebar-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .button-circle {
+    background-color: #6ab03e; 
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px; 
+  }
+  
+  .sidebar-button p {
+    margin-top: 5px;
+    font-size: 14px; 
+  }
+  
