@@ -27,7 +27,7 @@
   
   .extrato-blocos {
     display: grid;
-    height: 390px;
+    max-height: 390px;
     overflow-y: auto;
     gap: 10px; 
   }
