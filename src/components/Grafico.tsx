@@ -38,7 +38,7 @@ function Grafico({recipes}: GraficoProps) {
 
   const dataGainArray = Object.values(dataGain);
   const dataWasteArray = Object.values(dataWaste);
-  
+  console.log(dataWasteArray.length)
   return (
     <div className="grafico-bloco">
       <GraficoQuadrante title="Dinheiro gasto:">
@@ -58,12 +58,28 @@ function Grafico({recipes}: GraficoProps) {
       </GraficoQuadrante>
       <GraficoQuadrante title="Ganhos:">
         <PieChart
-        series={[{data: dataGainArray}]}
+        series={[{
+          data: dataGainArray.length !== 0 ? dataGainArray : [{id:0, value:0, label: ""}] ,
+          innerRadius: 30,
+          outerRadius: 100,
+          paddingAngle: 5,
+          cornerRadius: 5,
+          startAngle: -100,
+          endAngle: 225,
+        }]}
         />
       </GraficoQuadrante>
       <GraficoQuadrante title="Gastos:">
         <PieChart
-          series={[{data: dataWasteArray}]}
+          series={[{
+            data: dataWasteArray.length !== 0 ? dataWasteArray : [{id: 0, value: 0, label: ""}] ,
+            innerRadius: 30,
+            outerRadius: 100,
+            paddingAngle: 5,
+            cornerRadius: 5,
+            startAngle: -100,
+            endAngle: 225,
+          }]}
         />
       </GraficoQuadrante>
     </div>
