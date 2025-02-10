@@ -1,10 +1,7 @@
 import "../css/Saldo.css";
+import { HeaderProps } from "../interface/header";
 
-interface SaldoProps{
-  saldo: number
-}
-
-function Saldo({saldo}: SaldoProps) {
+function Saldo({saldo}: HeaderProps) {
 
 /* passa o saldo como prop aqui e no menuFlutuante pra atualizar, cara to com preguiça vai fe ai Deus te ensaboe */
 

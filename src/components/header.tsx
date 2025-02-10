@@ -1,10 +1,7 @@
 import "../css/Header.css";
 import Saldo from "./Saldo"; 
 import Grafico from "./Grafico"; 
-
-interface HeaderProps{
-  saldo : number
-}
+import { HeaderProps } from "../interface/header";
 
 function Header({saldo}: HeaderProps) {
   return (
