@@ -3,7 +3,7 @@ import Saldo from "./Saldo";
 import Grafico from "./Grafico"; 
 import { HeaderProps } from "../interface/header";
 
-function Header({balance}: HeaderProps) {
+function Header({balance, recipes}: HeaderProps) {
   return (
     <header className="header">
       <div className="header-top">
@@ -11,7 +11,10 @@ function Header({balance}: HeaderProps) {
         <p className="header-subtitle">Controle financeiro</p>
       </div>
       <div className="header-content">
-        <Saldo balance={balance}/> {/* Componente Saldo */}
+        <Saldo
+        balance={balance}
+        recipes={recipes}
+        /> {/* Componente Saldo */}
         <Grafico /> {/* Componente Grafico */}
       </div>
     </header>
