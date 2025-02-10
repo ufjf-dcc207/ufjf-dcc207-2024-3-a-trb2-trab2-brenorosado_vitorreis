@@ -2,7 +2,11 @@ import "../css/Header.css";
 import Saldo from "./Saldo"; 
 import Grafico from "./Grafico"; 
 
-function Header() {
+interface HeaderProps{
+  saldo : number
+}
+
+function Header({saldo}: HeaderProps) {
   return (
     <header className="header">
       <div className="header-top">
@@ -10,7 +14,7 @@ function Header() {
         <p className="header-subtitle">Controle financeiro</p>
       </div>
       <div className="header-content">
-        <Saldo /> {/* Componente Saldo */}
+        <Saldo saldo={saldo}/> {/* Componente Saldo */}
         <Grafico /> {/* Componente Grafico */}
       </div>
     </header>

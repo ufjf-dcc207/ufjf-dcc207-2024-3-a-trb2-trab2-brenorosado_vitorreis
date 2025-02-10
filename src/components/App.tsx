@@ -57,7 +57,7 @@ function App() {
         onClose={handleCloseMenu}
         addRecipe={addRecipe}
       />
-        <Header />
+        <Header saldo={saldo} />
     </div>
   );
 }
