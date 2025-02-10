@@ -13,7 +13,7 @@ function App() {
   const [menuVisible, setMenuVisible] = useState(false);
   const [menuType, setMenuType] = useState<"receita" | "despesa" | null>(null);
   const [recipes, setRecipes] = useState<RecipeType[]>([]);
-  const [saldo, setSaldo] = useState(0);
+  const [balance, setBalance] = useState(0);
 
   const handleAddClick = () => {
     setMenuType("receita"); // Define que o menu é para receita.
@@ -38,7 +38,7 @@ function App() {
       value: value
     };
 
-    setSaldo(saldo => saldo + value)
+    setBalance(balance => balance + value)
     setRecipes([...recipes, newRecipe])
     console.log([...recipes, newRecipe])
   }
@@ -57,7 +57,7 @@ function App() {
         onClose={handleCloseMenu}
         addRecipe={addRecipe}
       />
-        <Header saldo={saldo} />
+        <Header balance={balance} />
     </div>
   );
 }

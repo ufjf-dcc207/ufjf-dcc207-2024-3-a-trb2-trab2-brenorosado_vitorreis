@@ -1,7 +1,7 @@
 import "../css/Saldo.css";
 import { HeaderProps } from "../interface/header";
 
-function Saldo({saldo}: HeaderProps) {
+function Saldo({balance}: HeaderProps) {
 
 /* passa o saldo como prop aqui e no menuFlutuante pra atualizar, cara to com preguiça vai fe ai Deus te ensaboe */
 
@@ -9,7 +9,7 @@ function Saldo({saldo}: HeaderProps) {
     <div className="saldo-container">
       <div className="saldo-bloco">
         <h2>Saldo</h2>
-        <p>R${saldo.toLocaleString()}</p>
+        <p>R${balance.toLocaleString()}</p>
       </div>
       <div className="extrato-blocos">
         <div className="extrato-item"></div>
