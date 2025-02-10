@@ -11,7 +11,8 @@ export default function ExtratoBloco({recipe, removeRecipe}: ExtratoProps){
     }
     return(
     <div className="extrato-item">
-        <p className="valor">R${recipe.value.toLocaleString()}</p>
+        <p>R${recipe.value.toLocaleString()}</p>
+        <p>{recipe.title}</p>
         <p className="lixeira" onClick={handleDelete}>X</p>
     </div>
 )
