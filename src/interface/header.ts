@@ -1,3 +1,6 @@
+import { RecipeType } from "./recipe"
+
 export interface HeaderProps{
-    balance : number
+    balance: number
+    recipes: RecipeType[]
 }

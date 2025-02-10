@@ -3,11 +3,7 @@ import "../css/App.css";
 import Header from "./header";
 import Sidebar from "./Sidebar";
 import MenuFlutuante from "./MenuFlutuante";
-
-type RecipeType = {
-  id: number,
-  value: number,
-}
+import { RecipeType } from "../interface/recipe";
 
 function App() {
   const [menuVisible, setMenuVisible] = useState(false);
@@ -57,7 +53,10 @@ function App() {
         onClose={handleCloseMenu}
         addRecipe={addRecipe}
       />
-        <Header balance={balance} />
+        <Header 
+        balance={balance}
+        recipes={recipes}
+        />
     </div>
   );
 }
