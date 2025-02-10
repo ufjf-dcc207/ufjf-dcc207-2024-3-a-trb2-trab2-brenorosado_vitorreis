@@ -15,8 +15,8 @@ function Header({balance, recipes, removeRecipe}: HeaderProps) {
         balance={balance}
         recipes={recipes}
         removeRecipe={removeRecipe}
-        /> {/* Componente Saldo */}
-        <Grafico /> {/* Componente Grafico */}
+        />
+        <Grafico recipes={recipes}/>
       </div>
     </header>
   );
