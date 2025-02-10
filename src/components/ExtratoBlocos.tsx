@@ -15,5 +15,5 @@ export default function ExtratoBloco({recipe, removeRecipe}: ExtratoProps){
         <p>{recipe.title}</p>
         <p className="lixeira" onClick={handleDelete}>X</p>
     </div>
-)
+    )
 }

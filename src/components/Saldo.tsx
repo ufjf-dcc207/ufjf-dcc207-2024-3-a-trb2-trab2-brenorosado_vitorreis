@@ -3,9 +3,6 @@ import { HeaderProps } from "../interface/header";
 import ExtratoBloco from "./ExtratoBlocos";
 
 function Saldo({balance, recipes, removeRecipe}: HeaderProps) {
-
-/* passa o saldo como prop aqui e no menuFlutuante pra atualizar, cara to com preguiça vai fe ai Deus te ensaboe */
-
   return (
     <div className="saldo-container">
       <div className="saldo-bloco">

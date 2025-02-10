@@ -14,11 +14,12 @@ type PieChartType ={
 }
 
 function Grafico({recipes}: GraficoProps) {
-  let cashWaste = 0, cashGain = 0;
-  const dataGain: { [label: string]: PieChartType } = {};
-  const dataWaste: { [label: string]: PieChartType } = {};
+  let cashWaste = 0, cashGain = 0
+  const dataGain: { [label: string]: PieChartType } = {}, dataWaste: { [label: string]: PieChartType } = {}
 
+  //Percorre todo o recipes para preaprar as variaveis do gráfico
   recipes.forEach(recipe => {
+    //Guardando a quantidade de receita feita
     if (recipe.type === "receita") {
       cashGain += recipe.value;
       if (dataGain[recipe.title]) {
@@ -26,6 +27,7 @@ function Grafico({recipes}: GraficoProps) {
       } else {
         dataGain[recipe.title] = { id: recipe.id, value: recipe.value, label: recipe.title };
       }
+    //guardando a quantidade de gastos feitos
     } else {
       cashWaste -= recipe.value;
       if (dataWaste[recipe.title]) {
@@ -41,7 +43,7 @@ function Grafico({recipes}: GraficoProps) {
   console.log(dataWasteArray.length)
   return (
     <div className="grafico-bloco">
-      <GraficoQuadrante title="Dinheiro gasto:">
+      <GraficoQuadrante title="Despesas Geradas:">
         <Gauge width={150} height={150} value={cashWaste} valueMax={cashGain}
         sx={() => ({
           [`& .${gaugeClasses.valueArc}`]: {
@@ -50,9 +52,9 @@ function Grafico({recipes}: GraficoProps) {
         })}
         />
       </GraficoQuadrante>
-      <GraficoQuadrante title="Receitas X Despesas:">
+      <GraficoQuadrante title="Ganhos X Despesas:">
         <BarChart
-          xAxis={[{scaleType: 'band', data:['receitas', 'despesas']}]}
+          xAxis={[{scaleType: 'band', data:['Ganhos', 'Despesas']}]}
           series={[{data: [cashGain, cashWaste]}]}
         />
       </GraficoQuadrante>
@@ -69,7 +71,7 @@ function Grafico({recipes}: GraficoProps) {
         }]}
         />
       </GraficoQuadrante>
-      <GraficoQuadrante title="Gastos:">
+      <GraficoQuadrante title="Despesas:">
         <PieChart
           series={[{
             data: dataWasteArray.length !== 0 ? dataWasteArray : [{id: 0, value: 0, label: ""}] ,
