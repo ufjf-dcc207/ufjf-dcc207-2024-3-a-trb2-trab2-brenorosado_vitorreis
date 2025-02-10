@@ -13,9 +13,10 @@
   
   .sidebar-avatar {
     background-color: #c4c4c4; /* Fundo cinza para o avatar */
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
+    border-radius: 500000%;
+    width: 70px;
+    height: 70px;
+    padding: 0;
     margin-bottom: 170px;
   }
   

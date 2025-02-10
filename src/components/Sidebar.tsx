@@ -8,7 +8,7 @@ interface SidebarProps {
   function Sidebar({ onAddClick, onRemoveClick }: SidebarProps) {
     return (
       <div className="sidebar">
-        <div className="sidebar-avatar"></div>
+        <img src="/image.png" className="sidebar-avatar"></img>
         <button className="sidebar-button" onClick={onAddClick}>
           <div className="button-circle">+</div>
           <p>Receita</p>
