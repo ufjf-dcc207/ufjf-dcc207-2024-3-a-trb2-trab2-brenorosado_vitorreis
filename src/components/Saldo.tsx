@@ -2,7 +2,7 @@ import "../css/Saldo.css";
 import { HeaderProps } from "../interface/header";
 import ExtratoBloco from "./ExtratoBlocos";
 
-function Saldo({balance, recipes}: HeaderProps) {
+function Saldo({balance, recipes, removeRecipe}: HeaderProps) {
 
 /* passa o saldo como prop aqui e no menuFlutuante pra atualizar, cara to com preguiça vai fe ai Deus te ensaboe */
 
@@ -14,7 +14,7 @@ function Saldo({balance, recipes}: HeaderProps) {
       </div>
       <div className="extrato-blocos">
         {recipes.map(recipe => (
-          <ExtratoBloco key={recipe.id} recipe={recipe}/>
+          <ExtratoBloco key={recipe.id} recipe={recipe} removeRecipe={removeRecipe}/>
         ))}
       </div>
     </div>

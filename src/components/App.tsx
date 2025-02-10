@@ -40,6 +40,7 @@ function App() {
   }
 
   function removeRecipe(id: number){
+    setBalance(balance => balance - recipes.filter(recipe => recipe.id === id)[0].value)
     setRecipes([...recipes.filter(recipe => recipe.id !== id)])
   }
 
@@ -56,6 +57,7 @@ function App() {
         <Header 
         balance={balance}
         recipes={recipes}
+        removeRecipe={removeRecipe}
         />
     </div>
   );

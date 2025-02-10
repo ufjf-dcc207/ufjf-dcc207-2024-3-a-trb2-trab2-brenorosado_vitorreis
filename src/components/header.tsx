@@ -3,7 +3,7 @@ import Saldo from "./Saldo";
 import Grafico from "./Grafico"; 
 import { HeaderProps } from "../interface/header";
 
-function Header({balance, recipes}: HeaderProps) {
+function Header({balance, recipes, removeRecipe}: HeaderProps) {
   return (
     <header className="header">
       <div className="header-top">
@@ -14,6 +14,7 @@ function Header({balance, recipes}: HeaderProps) {
         <Saldo
         balance={balance}
         recipes={recipes}
+        removeRecipe={removeRecipe}
         /> {/* Componente Saldo */}
         <Grafico /> {/* Componente Grafico */}
       </div>
