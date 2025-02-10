@@ -27,6 +27,8 @@
   
   .extrato-blocos {
     display: grid;
+    height: 390px;
+    overflow-y: auto;
     gap: 10px; 
   }
   
@@ -37,8 +39,8 @@
     display: flex;
     justify-content: space-between;
 
-    .lixeira{
-      cursor: pointer;
-    }
   }
-  
+
+  .lixeira{
+    cursor: pointer;
+  }
