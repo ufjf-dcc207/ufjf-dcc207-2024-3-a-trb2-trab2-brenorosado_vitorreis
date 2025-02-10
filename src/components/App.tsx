@@ -26,11 +26,13 @@ function App() {
     setMenuType(null);
   };
 
-  function addRecipe(value: number, type: string | null){
+  function addRecipe(value: number, type: string | null, title: string){
     if(value === 0) return;
     value = type === "receita" ? value : value * -1
     const newRecipe = {
-      id: Date.now(), 
+      id: Date.now(),
+      type: type || "", 
+      title: title,
       value: value
     };
 
